@@ -1,0 +1,171 @@
+html {
+    background-color: #e2ecf3;
+}
+
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+pieChart {
+    width: 60%; /* Reduce the width of the chart by 60% */
+    height: auto; /* Let the height adjust automatically */
+}
+
+section {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+.center {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.completed-button {
+    background-color: #808080;
+}
+
+.add-button {
+    background-color: #2196F3;
+}
+
+.undone-button {
+    background-color: #FF5722;
+}
+
+table {
+    background-color: #b5cceb;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+
+
+h2 {
+    background-color: #dff0b8;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Georgia, serif;
+    font-size: x-large;
+}
+
+th, td {
+    background-color: #ebdfd7;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.completed {
+    color: green;
+    font-weight: bold;
+}
+
+.not-completed {
+    color: red;
+    font-weight: bold;
+}
+
+.green-button {
+    background-color: green;
+    color: white;
+}
+
+.completed-button {
+    background-color: #1652F0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.completed-button:hover {
+    background-color: #063A9C;
+}
+
+.delete-button {
+    background-color: #E95678;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #D1234A;
+}
+
+.mark-as-undone-button {
+    background-color: #F9A46D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-as-undone-button:hover {
+    background-color: #D97C35;
+}
+
+.add-new-task {
+    background-color: #E2EA73;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-new-task:hover {
+    background-color: #C1D040;
+}

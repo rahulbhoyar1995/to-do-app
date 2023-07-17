@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      canvas {
+          max-width: 400px;
+          max-height: 400px;
+      }
+      progress {
+        width: 200px;
+        height: 50px;
+      }
+    </style>
+    
+</head>
+<body>
+  <header>
+    <h1 id=""> AKSHAYA KAKDE DAILY TASK PLANNER</h1>
+  </header>
+  <h2>Add new task</h2>
+  </br>
+  <div class="center">
+      <a href="{% url 'add_task' %}" class="button add-new-task">Add new task</a>
+  </div>
+  </br>
+    
+    <table id="taskTable1">
+        
+        <h2>Tasks in Progress</h2>
+        <tr>
+          <th>Task Name</th>
+          <th>Expected Time</th>
+          <th>Status</th>
+          <th>Mark as completed</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+        {% for task in in_progess_tasks %}
+            <tr>
+            <td>{{  task.task_name  }}</td>
+            <td>{{  task.time  }} hours</td>
+            {% if   task.completed   %}
+                <td class="completed">Completed</td>
+            {% else %}
+                <td class="not-completed">In Progress</td>
+            {% endif %}
+            <td><a href="{% url 'completed_tasks' task.id %}" class="button green-button">Task Completed</a></td>
+            <td><a href="{% url 'task_update' task.id %}" class="button completed-button">Update Task</a></td>
+            <td><a href="{% url 'task_delete' task.id %}" class="button delete-button">Delete Task</a></td>
+            </tr>
+        {% endfor %}
+        <tr>
+          <tr>
+            <th>Total hours completed : </th>
+            <th><span id="totalInCompletedHours"></span></th>
+            <th><progress id="progressBar1" value="0" max="100"></progress></th>
+          
+        </tr>
+        
+      </table>
+
+      <table id="taskTable2">
+        <h2>Tasks Completed</h2>
+        <tr>
+          <th>Task Name</th>
+          <th>Status</th>
+          <th>Time Invested</th>
+          <th>Undo</th>
+          
+
+        </tr>
+        {% for task in completed_tasks%}
+            <tr>
+            <td>{{  task.task_name  }}</td>
+            {% if   task.completed   %}
+                <td class="completed">Completed</td>
+            {% else %}
+                <td class="not-completed">In Progress</td>
+            {% endif %}
+            <td>{{  task.time  }} hours</td>
+            <td><a href="{% url 'task_undone' task.id %}" class="button mark-as-undone-button">Mark as Undone</a>
+        {% endfor %}
+        <tr>
+        <th>Total hours completed : </th>
+        <th><span id="totalCompletedHours"></span></th>
+        <th><progress id="progressBar2" value="0" max="100"></progress></th>
+        </tr>
+      </table>
+      <canvas id="pieChart"></canvas>
+      <canvas id="barChart"></canvas>
+      
+      
+      <script src="{% static 'app/js/completed_hrs.js' %}"></script>
+      <script src="{% static 'app/js/incompleted_hrs.js' %}"></script>
+      <script src="{% static 'app/js/pie_chart.js' %}"></script>
+      <script src="{% static 'app/js/progress_bar1.js' %}"></script>
+      <script src="{% static 'app/js/progress_bar2.js' %}"></script>
+      
+
+      
+      
+</body>
+</html>
+
