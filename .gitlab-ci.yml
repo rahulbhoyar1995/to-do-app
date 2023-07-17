@@ -34,7 +34,7 @@ deploy:
 
 # Set environment variables for the pipeline
 variables:
-  DJANGO_SETTINGS_MODULE: "cv_generator.settings"
+  DJANGO_SETTINGS_MODULE: "to_do_app.settings"
   # Add any additional environment variables required for your Django project
 
 # Define the cache configuration
