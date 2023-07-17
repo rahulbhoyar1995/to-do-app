@@ -4,6 +4,8 @@
 
 The To-Do App is a web application built with Django that allows users to manage their tasks and create to-do lists.
 
+![1689595510838](image/README/1689595510838.png)
+
 ## Features
 
 - User registration and authentication
