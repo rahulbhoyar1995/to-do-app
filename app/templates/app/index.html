@@ -20,7 +20,7 @@
 </head>
 <body>
   <header>
-    <h1 id=""> AKSHAYA KAKDE DAILY TASK PLANNER</h1>
+    <h1 id=""> DAILY TASK PLANNER</h1>
   </header>
   <h2>Add new task</h2>
   </br>
@@ -71,6 +71,7 @@
           <th>Status</th>
           <th>Time Invested</th>
           <th>Undo</th>
+          <th>Delete</th>
           
 
         </tr>
@@ -84,6 +85,7 @@
             {% endif %}
             <td>{{  task.time  }} hours</td>
             <td><a href="{% url 'task_undone' task.id %}" class="button mark-as-undone-button">Mark as Undone</a>
+            <td><a href="{% url 'task_delete' task.id %}" class="button delete-button">Delete Task</a></td>
         {% endfor %}
         <tr>
         <th>Total hours completed : </th>

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/rahulbhoyar/Desktop/Rahul_PC/Gitlab_Projects/Todo_App/venv"
+VIRTUAL_ENV="/Users/rahulbhoyar/Desktop/Rahul_PC/Gitlab_Projects/to-do-app-using-django/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

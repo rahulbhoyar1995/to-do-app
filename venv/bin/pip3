@@ -1,4 +1,4 @@
-#!/Users/rahulbhoyar/Desktop/Rahul_PC/Gitlab_Projects/Todo_App/venv/bin/python3
+#!/Users/rahulbhoyar/Desktop/Rahul_PC/Gitlab_Projects/to-do-app-using-django/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
