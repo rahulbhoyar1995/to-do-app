@@ -1,4 +1,6 @@
-#!/Users/rahulbhoyar/Desktop/Rahul_PC/Gitlab_Projects/to-do-app-using-django/venv/bin/python3
+#!/bin/sh
+'''exec' "/Users/rahulbhoyar/Library/CloudStorage/GoogleDrive-rahulbhoyaroffice@gmail.com/My Drive/Colab Notebooks/github_deployed/web_developement_projects/to-do-app/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
